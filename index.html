@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chifoumi</title>
+    <script defer src="./script.js"></script>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #332f2f;
+        color: white;
+      }
+      .parameters {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 15px;
+        text-align: center;
+      }
+      .parameters .title {
+        font-weight: 600;
+        font-size: 30px;
+        margin: 10px;
+      }
+      .parameters > div {
+        margin-bottom: 10px;
+      }
+      .parameters input {
+        width: 40px;
+      }
+      .parameters i {
+        font-size: 10px;
+      }
+      .ui {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        display: none;
+      }
+      .credit {
+        position: absolute;
+        left: 5px;
+        bottom: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parameters" id="parameters">
+      <div class="title">Welcome to the Chifoumi's Simulator</div>
+      <div>
+        Number of players <i>(>=3 and multiple of 3 by preference)</i> :
+        <input type="number" min="3" value="30" id="nbrPlayers" />
+      </div>
+      <div>
+        Size of players :
+        <input type="number" min="1" value="30" id="emojiSize" />
+      </div>
+      <button id="start">Lancer la simulation</button>
+    </div>
+    <div class="ui" id="ui">
+      <div>🪨<span>0</span></div>
+      <div>🌿<span>0</span></div>
+      <div>✂️<span>0</span></div>
+    </div>
+    <div class="credit">by PLB</div>
+  </body>
+</html>
